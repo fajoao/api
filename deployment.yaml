@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apifabio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apiapp
+  template:
+    metadata:
+      labels:
+        app: apiapp
+    spec:
+      containers:
+      - name: apicontainer
+        image: apiimage:1.0.0
+        ports:
+        - containerPort: 3000
