@@ -1,5 +1,5 @@
 # Use uma imagem base do Node.js
-FROM node:14
+FROM node:16
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Defina o comando de inicialização do contêiner
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
